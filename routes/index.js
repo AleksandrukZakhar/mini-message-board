@@ -18,6 +18,10 @@ router.get("/", (req, res, next) => {
     res.render("index", { title: "Messages", messages: messages });
 });
 
+router.get("/new", (req, res, next) => {
+    res.render("form");
+});
+
 router.post("/new", (req, res, next) => {
     const { messageText, messageUser } = req.body;
 

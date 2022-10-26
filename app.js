@@ -18,6 +18,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
+app.use("/new", indexRouter);
 
 app.use((req, res, next) => {
     next(createError(404));
